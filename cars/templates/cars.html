@@ -7,9 +7,14 @@
     <title>Meus carros</title>
 </head>
 
-<body>
-    <h1>Carros da PycodeBR</h1>    
-    <h3>Só carro top!</h3>
+{% block content %}
+<body>    
+    <ul>
+    {% for car in cars %}
+        <li>{{ car.brand }} - {{ car.model }} - {{ car.factory_year }}</li>
+    {% endfor %}
+    </ul>
 </body>
+{% endblock %}
 
 </html>
