@@ -18,8 +18,9 @@ def new_car_view(request):
 
         if new_car_form.is_valid(): # valida o form antes de gravar
             new_car_form.save()
-            return redirect('cars_list')        
+            return redirect('cars_list')
         
     else:        
         new_car_form = CarModelForm() # form vazio   
-        return render(request, 'new_car.html', {'new_car_form': new_car_form})
+    
+    return render(request, 'new_car.html', {'new_car_form': new_car_form})
