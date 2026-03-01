@@ -83,6 +83,8 @@
     src="{{ object.photo.url }}"
     alt="{{ object.model }} - {{ object.brand }}"
   />
+  {% else %}
+  <p class="no-photo">Foto não disponível</p>
   {% endif %}
   <h2>{{ object.brand }} {{ object.model }}</h2>
   <p><strong>Ano de fabricação:</strong> {{ object.factory_year }}</p>
