@@ -1,9 +1,9 @@
-import os
+from decouple import config
 from openai import OpenAI
 
 
 client = OpenAI(
-    api_key='API_KEY'
+    api_key=config('API_KEY')
 )
 
 
